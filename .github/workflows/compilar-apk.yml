@@ -17,6 +17,8 @@ jobs:
           java-version: '17'
       - name: Instalar SDK Android
         uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools'
       - name: Instalar plataforma Android 35
         run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
       - name: Preparar Gradle 8.9
